@@ -3,7 +3,6 @@ function authorizeClientSecret(token) {
     const expiryInterval = 60000 // one minute expressed in miliseconds
     const expiry = new Date(Date.now() + expiryInterval);
     let json
-    // if the last character in the token is a number and the number is even, then authorization succeeds
 	
   var encodedCreds = token.split(' ')[1]
   var plainCreds = (new Buffer(encodedCreds, 'base64')).toString().split(':')
